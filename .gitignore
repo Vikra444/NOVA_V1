@@ -1,0 +1,15 @@
+# Secrets
+.env
+.env.example
+NOVA_PIPELINE/.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local data/logs (optional but recommended)
+NOVA_data/
+mood_log.csv
+control_log.txt
+camera_view.txt
+*.db
