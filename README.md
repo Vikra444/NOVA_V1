@@ -1,157 +1,143 @@
-<<<<<<< Updated upstream
-# NOVA_V1 🌌  
-**An advanced desktop AI assistant framework inspired by JARVIS – with memory, vision, mood tracking, and full PC automation.**
+<h1 align="center">🌌 NOVA_V1</h1>
+<h3 align="center">Advanced Desktop AI Assistant (JARVIS-Style)</h3>
 
-![NOVA_V1 Banner](screenshots/2025-10-18_16-39-27.png)
-
-> NOVA_V1 is a modular AI assistant that runs on your local machine and connects different abilities like voice control, web search, system monitoring, camera vision, and task automation into one unified “NOVA” brain.
-
----
-
-## ✨ Core Capabilities
-
-- 🎙️ **Voice Interaction**
-  - Talk to NOVA using a microphone.
-  - NOVA responds using TTS.
-  - Can open apps, search Google, control windows, take screenshots, and more.
-
-- 🧠 **Memory & Context**
-  - Persistent memory storage (`NOVA_memory.py`).
-  - Mood logging and context tracking.
-  - Can be extended into a personal knowledge base.
-
-- 👁️ **Computer Vision**
-  - Object detection with `yolov8n.pt`.
-  - Camera tests and snapshots.
-  - Hooks for building higher-level vision features.
-
-- 🖥️ **Desktop Control & Automation**
-  - Keyboard and mouse automation (`keyboard_mouse_CTRL.py`).
-  - Window management (`NOVA_window_CTRL.py`, `Jarvis_window_CTRL.py` in `NOVA_PIPELINE/`).
-  - Ideal for building a “personal OS-level AI”.
-
-- 🌐 **Online Intelligence**
-  - Google search (`NOVA_google_search.py`).
-  - News fetcher (`NOVA_news.py`).
-  - Weather helper (`NOVA_get_whether.py`, `NOVA_PIPELINE/jarvis_get_whether.py`).
-  - Email helper (`NOVA_email.py`).
-
-- 🖼️ **Screen & Screenshot Tools**
-  - Screenshot capture (`NOVA_screenshot.py`).
-  - Screen logging utilities under `features/addons/`.
-
-- 🎵 **Media Control**
-  - YouTube / music integration (`NOVA_youtube_music.py`).
-  - Test tools under `tools/`.
-
-- 🧩 **Modular Feature System**
-  - `features/` folder contains:
-    - `addons/` → reminders, ambient sound detector, face registry, screen logger, etc.
-    - `mood_logger/` → mood tracking with templates.
-    - `permissions/` → basic visibility / safety layer.
-    - `sample_feature/` → template for new functionality.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+  <img src="https://img.shields.io/badge/AI-Assistant-green?logo=googleassistant">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen">
+</p>
 
 ---
 
-## 🧱 Project Structure (Overview)
+## 🚀 Introduction
+
+**NOVA_V1** is an advanced, modular, desktop-based AI assistant inspired by **Iron Man’s JARVIS**.  
+It combines **voice control, automation, memory, vision, web search, system control**, and dynamic AI responses into one powerful framework.
+
+Designed for **real-world usage**, not just a chatbot.  
+Runs **offline locally** with optional online features.
+
+---
+
+## ✨ Key Features
+
+### 🎙️ Voice Assistant  
+- Mic input + smart command recognition  
+- Google search, email, weather  
+- System control via voice  
+
+### 🧠 Memory System  
+- Long-term context storage  
+- Mood tracking  
+- Interaction logging  
+
+### 👁️ Computer Vision  
+- YOLOv8 object detection  
+- Camera snapshots  
+- Real-time frame reading  
+
+### 🖥️ Full Desktop Automation  
+- Keyboard/mouse automation  
+- Window control (open/close/minimize)  
+- File opener & app launcher  
+
+### 🌐 Online Intelligence  
+- YouTube music player  
+- News fetcher  
+- Weather & web automation  
+
+### 🧩 Modular Architecture  
+Clean & expandable folders:  
+- `features/` → extra modules & mood logger  
+- `NOVA_PIPELINE/` → main command pipeline  
+- `tools/` → debug/testing utilities  
+
+---
+
+## 📂 Project Folder Structure
 
 ```text
 NOVA_V1/
-├── NOVA_PIPELINE/              # Core Jarvis-style pipeline utilities
-├── features/                   # Camera, mood logger, permissions, addons, etc.
-├── tools/                      # Test scripts and utilities
-├── kivy_mobile/                # Kivy config for mobile experiments
-├── screenshots/                # UI / feature screenshots
-├── NOVA_code_assistant.py      # Code helper / dev assistant
-├── NOVA_email.py               # Email automation
+├── NOVA_PIPELINE/              # Jarvis-like core functions
+├── features/                   # Mood logger, addons, permissions, etc.
+├── tools/                      # Tests: Google, camera, YouTube
+├── screenshots/                # UI screenshots
 ├── NOVA_gui.py                 # GUI launcher
-├── NOVA_memory.py              # Memory / logging system
-├── NOVA_news.py                # News integration
-├── NOVA_prompts.py             # Prompt templates for NOVA
-├── NOVA_system_monitor.py      # System resource monitoring
-├── NOVA_tasker_controller.py   # Task/control orchestration
-├── NOVA_youtube_music.py       # YouTube/music logic
-├── agent.py                    # Main NOVA agent entry point
-├── start_gui.py                # Alternative GUI entry
+├── agent.py                    # Main NOVA engine
+├── NOVA_memory.py              # Memory engine
+├── NOVA_screenshot.py          # Screenshot system
+├── NOVA_system_monitor.py      # PC health monitor
+├── NOVA_youtube_music.py       # YouTube music control
 ├── requirements.txt            # Python dependencies
-├── yolov8n.pt                  # YOLOv8 model (object detection)
-└── .permissions.json           # Permission configuration
-=======
-# NOVA_V1 🌌  
-**An advanced desktop AI assistant framework inspired by JARVIS – with memory, vision, mood tracking, and full PC automation.**
+└── yolov8n.pt                  # Vision model
 
-![NOVA_V1 Banner](screenshots/2025-10-18_16-39-27.png)
+1️⃣ Clone the repo
+git clone https://github.com/Vikra444/NOVA_V1.git
+cd NOVA_V1
 
-> NOVA_V1 is a modular AI assistant that runs on your local machine and connects different abilities like voice control, web search, system monitoring, camera vision, and task automation into one unified “NOVA” brain.
+
+2️⃣ Create venv
+python -m venv .venv
+.venv\Scripts\activate
+
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+
+▶️ How to Run
+🟦 Run main AI engine
+python agent.py console
+
+
+
+🟩 Run GUI version
+python start_gui.py
+
+
+
+🟨 Test standalone features
+python tools/test_google_search.py
+python tools/test_camera_access.py
+python tools/test_youtube_play.py
+
+
+🛣️ Roadmap (Upcoming Features)
+Hinglish optimized voice mode
+Personality engine (emotional + adaptive)
+Plugin marketplace system
+IoT / Home automation
+Better GUI dashboard
+AI memory timeline visualization
+More computer vision tools
+
+
+🤝 Contribution
+Pull requests welcome!
+Tips:
+Keep code modular
+Add comments
+Avoid pushing large files or secrets
+
+👨‍💻 Author
+Vikram
+Creator of NOVA — A powerful JARVIS-inspired desktop AI system.
 
 ---
 
-## ✨ Core Capabilities
+### Ab tujhe kya karna hai (super simple):
 
-- 🎙️ **Voice Interaction**
-  - Talk to NOVA using a microphone.
-  - NOVA responds using TTS.
-  - Can open apps, search Google, control windows, take screenshots, and more.
+1. GitHub pe jaa → `NOVA_V1` repo open kar  
+2. `README.md` pe click kar  
+3. Upar right side **✏️ (edit)** pe click  
+4. Jo bhi abhi andar hai **sab delete** kar  
+5. Upar jo maine full block diya hai **poora copy–paste** kar de  
+6. Niche commit message likh de: `Update professional README`  
+7. **Commit changes** button daba de  
 
-- 🧠 **Memory & Context**
-  - Persistent memory storage (`NOVA_memory.py`).
-  - Mood logging and context tracking.
-  - Can be extended into a personal knowledge base.
+Bas.  
+Ab tera README **clean, professional, aur perfect formatted** dikh lega.  
 
-- 👁️ **Computer Vision**
-  - Object detection with `yolov8n.pt`.
-  - Camera tests and snapshots.
-  - Hooks for building higher-level vision features.
-
-- 🖥️ **Desktop Control & Automation**
-  - Keyboard and mouse automation (`keyboard_mouse_CTRL.py`).
-  - Window management (`NOVA_window_CTRL.py`, `Jarvis_window_CTRL.py` in `NOVA_PIPELINE/`).
-  - Ideal for building a “personal OS-level AI”.
-
-- 🌐 **Online Intelligence**
-  - Google search (`NOVA_google_search.py`).
-  - News fetcher (`NOVA_news.py`).
-  - Weather helper (`NOVA_get_whether.py`, `NOVA_PIPELINE/jarvis_get_whether.py`).
-  - Email helper (`NOVA_email.py`).
-
-- 🖼️ **Screen & Screenshot Tools**
-  - Screenshot capture (`NOVA_screenshot.py`).
-  - Screen logging utilities under `features/addons/`.
-
-- 🎵 **Media Control**
-  - YouTube / music integration (`NOVA_youtube_music.py`).
-  - Test tools under `tools/`.
-
-- 🧩 **Modular Feature System**
-  - `features/` folder contains:
-    - `addons/` → reminders, ambient sound detector, face registry, screen logger, etc.
-    - `mood_logger/` → mood tracking with templates.
-    - `permissions/` → basic visibility / safety layer.
-    - `sample_feature/` → template for new functionality.
-
----
-
-## 🧱 Project Structure (Overview)
-
-```text
-NOVA_V1/
-├── NOVA_PIPELINE/              # Core Jarvis-style pipeline utilities
-├── features/                   # Camera, mood logger, permissions, addons, etc.
-├── tools/                      # Test scripts and utilities
-├── kivy_mobile/                # Kivy config for mobile experiments
-├── screenshots/                # UI / feature screenshots
-├── NOVA_code_assistant.py      # Code helper / dev assistant
-├── NOVA_email.py               # Email automation
-├── NOVA_gui.py                 # GUI launcher
-├── NOVA_memory.py              # Memory / logging system
-├── NOVA_news.py                # News integration
-├── NOVA_prompts.py             # Prompt templates for NOVA
-├── NOVA_system_monitor.py      # System resource monitoring
-├── NOVA_tasker_controller.py   # Task/control orchestration
-├── NOVA_youtube_music.py       # YouTube/music logic
-├── agent.py                    # Main NOVA agent entry point
-├── start_gui.py                # Alternative GUI entry
-├── requirements.txt            # Python dependencies
-├── yolov8n.pt                  # YOLOv8 model (object detection)
-└── .permissions.json           # Permission configuration
->>>>>>> Stashed changes
+Agar tu bole, next step me NOVA ka **logo + architecture diagram** bhi design kar dete hain 😎
+::contentReference[oaicite:0]{index=0}
